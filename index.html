@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-box">
+        <div class="filter">
+            <h1>SIMPLE PORTFOLIO FILTER</h1>
+            <p>USING CSS HTML AND JAVASCRIPT</p>
+            <ul>
+                <li>
+                    <a class="buttons active " data-filter="all">All</a>
+                    <a class="buttons" data-filter="road">ROAD</a>
+                    <a class="buttons" data-filter="mountain">MOUNTAIN</a>
+                    <a class="buttons" data-filter="car">CAR</a>
+                    <a class="buttons" data-filter="sky">SKY</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imagebox">
+            <img src="1.jpg" class="image-filter road " />
+            <img src="2.jpg" class="image-filter road " />
+            <img src="3.jpg" class="image-filter road " />
+            <img src="4.jpg" class="image-filter road " />
+            <img src="5.jpg" class="image-filter sky " />
+            <img src="6.jpg" class="image-filter sky " />
+            <img src="7.jpg" class="image-filter car " />
+            <img src="8.jpg" class="image-filter car " />
+            <img src="9.jpg" class="image-filter car " />
+            <img src="10.jpg" class="image-filter mountain " />
+            <img src="11.jpg" class="image-filter mountain " />
+            <img src="12.jpg" class="image-filter mountain " />
+        </div>
+
+    </div>
+
+
+    <script>
+        $(document).ready (function(){
+            $(".buttons").click (function(){
+                var buttonvalue =$(this).attr ('data-filter');
+                
+                if(buttonvalue == 'all'){
+                    $('.image-filter').show('1000');
+                }
+                else{
+                    $('.image-filter').not ('.'+buttonvalue).hide('1000');
+                    $('.image-filter').filter ('.'+buttonvalue).show('1000');
+
+                }
+                $(this).addClass('active').siblings().removeClass('active')
+            });
+        });
+    </script>
+</body>
+</html>

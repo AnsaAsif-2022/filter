@@ -1,0 +1,72 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+.main-box{
+    background-color:darkkhaki ;
+    width: 100%;
+   
+}
+h1{
+    text-align: center;
+  /* position: absolute;
+  margin-top: 50px; */
+    font-size: 60px;
+    letter-spacing: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: chocolate;
+
+}
+p{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkmagenta;
+
+}
+ul li{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a{
+    transition: 1s;
+    border: 2px brown;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    color: chocolate;
+
+
+
+}
+.active {
+    color: chocolate;
+}
+a:hover{
+    background-color: chocolate;
+    color: black;
+    border: 2px brown;
+}
+.imagebox img{
+    width: 400px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 25px;
+    border-radius: 20px;
+    border: 2px solid;
+    cursor: pointer;
+
+}
+.imagebox img:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
